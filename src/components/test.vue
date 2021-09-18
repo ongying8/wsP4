@@ -22,15 +22,102 @@
         v-on & v-bind <br>
         <button type="button" class="btn btn-danger" @click="alertMsg('D', 'F', $event)">Click</button>
         <button type="button" class="btn btn-info" @dblclick="alertMsgDB">DB_Click</button>
+        
+        
+        
         <!-- ---------------------------------------- -->
         <br>v-model
 
         <div class="input-group input-group-sm mb-3">
-            <span class-"input-group-text" id="inputGroup-sizing-sm">user</span>
-            <input type="text" class="form-control" aria-label-"Sizing example input" v-model="usrName">
+            <span class="input-group-text" id="inputGroup-sizing-sm">user</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" v-model="usrName">
             </div>
         <div class="input-groupㆍmb-3">
             <span class="input-group-text" id=" inputGroup-sizing-sm">password</span>
-            <input type="text" class="form-control" aria-label-"Sizing example input" v-model="usrpass">
+            <input type="text" class="form-control" aria-label="Sizing example input" v-model="usrPass">
             </div>
+            <div>
+                S H O W <br>
+                user : {{userName}}<br>
+                password : {{usrPass}}
+                </div>
+        <div class="container">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Color</span>
+                <input type="text" class="form-control" aria-describedby="inputGroup-size-default"  v-model="bgColor">
+                </div>
+                <div v-bind:style="{'background-color' : bgColor}">
+                    Color : {{bgColor}}
+                    </div>
+                    </div>
+        <!-- ---------------------------------------- -->
 
+
+        </div>
+        </template>
+
+<script>
+export default {
+  name: "test",
+  data(){
+      return{
+          imgName : "ชินจัง",
+          url : "รูปภาพ",
+          celsius : 30,
+          dataPumu : ["หัว" , "ก้อย"],
+          text : "click",
+
+          myinfo:{
+              myName: "ภัทรภร",
+              myNiclName: "หญิง",
+              myId: "6130203462",
+          },
+
+          hideShown : true,
+
+          usrName: null,
+          usrPass: null,
+          bgColor: null
+
+
+      }
+  },
+  computed: {
+      fahrenheit(){
+          let result = this.celsius*1.8 + 32 ;
+          return result;
+      },
+      random(){
+          return Math.random() > 0.5 ? 1:0 ;
+      },
+      shown(){
+          return this.dataPumu[this.random];
+      },
+      labelBotton(){
+          return this.hideShown ? "Hide" : "Shown" ;
+      }
+
+  },
+
+  methods:{
+      alertMsg(p1, p2, e){
+          alert(`You ${e.type} the button at ${e.clientX}, ${e.clientY}`);
+          alert(`parameter ${p1} , ${p2}`);
+      },
+      alertMsgDB(){
+          alert('Hi, Ying');
+      },
+      myShowInfo(){
+          this.hideShown = !this.hideShown;
+      }
+
+  }
+};
+
+</script>
+<style>
+.tmp {
+    background: pink;
+    color: black;
+}
+</style>
