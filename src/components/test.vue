@@ -32,8 +32,8 @@
             <span class="input-group-text" id="inputGroup-sizing-sm">user</span>
             <input type="text" class="form-control" aria-label="Sizing example input" v-model="usrName">
             </div>
-        <div class="input-groupㆍmb-3">
-            <span class="input-group-text" id=" inputGroup-sizing-sm">password</span>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">password</span>
             <input type="text" class="form-control" aria-label="Sizing example input" v-model="usrPass">
             </div>
             <div>
@@ -62,7 +62,7 @@ export default {
   data(){
       return{
           imgName : "ชินจัง",
-          url : "รูปภาพ",
+          url : "https://cf.shopee.co.th/file/bec340152d8288d0bbdbca09b61fff32",
           celsius : 30,
           dataPumu : ["หัว" , "ก้อย"],
           text : "click",
