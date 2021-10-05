@@ -7,7 +7,7 @@
         type="text"
         class="form-control"
         aria-label="Sizing example input"
-        v-model="info.EmployeeID"
+        v-model="info.EmployeeID" 
       />
     </div>
     <div class="input-group mb-3">
@@ -32,7 +32,7 @@
     <!-- <div>
             <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" v-model="info.gender" value="Male">
             <label class="btn btn-outline-primary" for="option1">Male</label>
-
+            
             <input type="radio" class="btn-check" name="options-outlined" id="option2" autocomplete="off" v-model="info.gender" value="Female">
             <label class="btn btn-outline-danger" for="option2">Female</label>
         </div> -->
@@ -64,10 +64,10 @@
       <b-form-timepicker v-model="info.timeOut" locale="en"></b-form-timepicker>
     </div>
 
-    <button type="button" class="btn btn-secondary" @click="save">Save</button>
+    <button type="button" class="btn btn-secondary" @click="save">Save</button> 
 
     <!-- <div :hidden="!show">
-            <h3>Employee ID :{{info.EmployeeID}}</h3>
+            <h3>Employee ID :{{info.EmployeeID}}</h3> {{}}
             <h3>First Name :{{info.firstName}}</h3>
             <h3>Last Name :{{info.lastName}}</h3>
             <h3>Gender :{{info.gender}}</h3>
@@ -77,6 +77,7 @@
                 <span v-else v-bind:style="{color : 'red'}">Non Active</span>
             </h3>
         </div>  -->
+
     <div :hidden="!show" v-for="(data, index) in employeeInfo" :key="index">
       <span>Employee ID :{{ data.EmployeeID }}</span>
       <span>First Name :{{ data.firstName }}</span>
@@ -138,7 +139,7 @@ export default {
         timeIn: null,
         timeOut: null,
       };
-      // this.show = this.show ? false : true;//ifเบบย่อ
+      // this.show = this.show ? false : true;
     },
     checkActiveTime() {
       const today = new Date();
@@ -152,8 +153,8 @@ export default {
       } else {
         this.info.active = false;
       }
-      // console.log(moment(this.info.timeIn,'HH:mm').isBefore(time))//เข้างาน
-      // console.log(moment(time).isBefore(moment(this.info.timeIn,'HH:mm')))//ออกงาน
+      // console.log(moment(this.info.timeIn,'HH:mm').isBefore(time))//เข้า
+      // console.log(moment(time).isBefore(moment(this.info.timeIn,'HH:mm')))//ออก
     },
   },
 };
