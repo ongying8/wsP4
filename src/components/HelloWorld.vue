@@ -1,6 +1,6 @@
 <template>
  <div id = "hello">
-   <br><p>Name : {{myName}}</p>
+   <!-- <br><p>Name : {{myName}}</p>
    <p>Tel : {{tel}}</p>
    <p>ID : {{ID}}</p>
 
@@ -8,21 +8,21 @@
   <button type="button" class="btn btn-info">Info</button>
   <button type="button" class="btn btn-warning">Warning</button>
   <br><i class="fas fa-save"></i>
-  <br />
+  <br /> -->
 
  </div>
 </template>
 
 <script>
 export default {
-  name : "hello",
-  data() {
-    return {
-      myName : "Pattaraporn",
-      tel: "0825210663",
-      ID: "6130203462",
-    };
-  }
+  // name : "hello",
+  // data() {
+  //   return {
+  //     myName : "Pattaraporn",
+  //     tel: "0825210663",
+  //     ID: "6130203462",
+  //   };
+  // }
 };
 </script>
 

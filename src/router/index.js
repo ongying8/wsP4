@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-//import Home from '../views/Home.vue'
+import Home from '../views/Home.vue'
 import Page2 from '@/components/Page2.vue'
-import Student from '@/components/Student.vue'
+// import Student from '@/components/Student.vue'
 import Page1 from '@/components/Page1.vue'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
@@ -20,12 +20,17 @@ Vue.use(axios, VueAxios)
 
 const routes = [
   {
-    path: '/Student',
-    name: 'Student',
-    component: Student
+    path: '/',
+    name: 'Home',
+    component: Home
   },
+  // {
+  //   path: '/Student',
+  //   name: 'Student',
+  //   component: Student
+  // },
   {
-    path: '/page1/:id/:fname/:lname',
+    path: '/page1/:id/:fname/:lname/:gender/:picked',
     name: 'Page1',
     component: Page1
   },

@@ -8,11 +8,9 @@
     </div>
   </div>
 </template>
-
 <script>
 import Router from "vue-router";
 const router = new Router({ mode: "history" });
-
 import axios from "axios";
 export default {
   name: "Page2",
@@ -35,6 +33,5 @@ export default {
   },
 };
 </script>
-
 <style>
 </style>

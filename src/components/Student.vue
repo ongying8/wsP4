@@ -18,8 +18,8 @@
             <br>
             <textarea v-model="introduce" placeholder="Introduce yourself"></textarea>
             <br>
-            <input type="radio" id="one" value="one" v-model="picked"/> จบละจ้า
-            <input type="radio" id="two" value="two" v-model="picked"/> จะไม่จบช่ะ?
+            <input type="radio" id="End" value="End" v-model="picked"/> จบละจ้า
+            <input type="radio" id="NOend" value="NOend" v-model="picked"/> จะไม่จบช่ะ?
 
             <select v-model="delected">
                 <option value="">Select</option>
@@ -67,7 +67,7 @@ export default {
       if (!this.id) {
         this.conditions.push("*Please input your Student ID*");
       } else {
-        router.push(`/Page1/${this.id}/${this.Fname}/${this.Lname}`);
+        router.push(`/Page1/${this.id}/${this.Fname}/${this.Lname}/${this.gender}/${this.picked}`);
         router.go();
       }
       e.preventDefault();
