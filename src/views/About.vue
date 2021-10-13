@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>My data</h1>
+    <h1>MY DATA!!</h1>
     <!-- <b-table stiped hover :items="allUsers"> </b-table> -->
     <button type="submit" class="btn btn-primary" @click="add">
       + {{ counterR }}
@@ -17,7 +17,6 @@ import counters from "./counter.js";
 // import { ref, reactive } from "vue";
 //ref ใช้กับ typ ประเภท int str... ทั่วไป
 //reactive ใช้กับพวก opject array
-
 export default {
   name: "about",
   setup() {
